@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'work sans ';
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    /*me permite deslizar  cuando hago clic en los links del menu*/
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #0a0000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+
+.contenedor-header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.contenedor-header header .logo {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el texto Alejandra */
+}
+
+.contenedor-header header .nav {
+    display: flex;
+    gap: 20px; /* Ajusta el espacio entre elementos del menú */
+}
+
+.contenedor-header header .nav-responsive {
+    order: 3; /* Mover el menú responsive al lado derecho si es necesario */
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{
+    background-color: #1CB698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top,rgba(30,35,38,.8),rgba(30,35,38,1)),
+    url(img/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+   
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #0a0000;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.incio .contenido-banner .redes{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+.redes a:hover {
+    background-color: #1CB698;
+    color: #000;
+}
+.sobremi{
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 40px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;  
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 25px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+  }
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .intereses{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereses .intereses:hover{
+    background-color: #1CB698;
+
+}
+.sobremi .fila .col .contenedor-intereses .intereses i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/*SECCION EDUCACION*/
+
+.Educacion{
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.Educacion .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.Educacion h2{
+    font-size: 40px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.Educacion .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;  
+}
+.Educacion .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.Educacion .fila{
+    display: flex;
+}
+.Educacion .fila .col{
+    width: 50%;
+}
+.Educacion .fila .col h3{
+    font-size: 25px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+  }
+.Educacion .fila .col ul{
+    list-style: none;
+}
+.Educacion .fila .col ul li{
+    margin: 12px 0;
+}
+.Educacion .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.Educacion .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/*SECCION HABILIDADES PRINCIPALES*/
+.HabilidadesPrincipales {
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.HabilidadesPrincipales .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.HabilidadesPrincipales h2 {
+    font-size: 40px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.HabilidadesPrincipales .contenido-seccion p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;  
+}
+
+.HabilidadesPrincipales .contenido-seccion p span {
+    color: #1CB698;
+    font-weight: bold;
+}
+
+.HabilidadesPrincipales .fila {
+    display: flex;
+}
+
+.HabilidadesPrincipales .fila .col {
+    width: 50%;
+}
+
+.HabilidadesPrincipales .fila .col h3 {
+    font-size: 25px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.HabilidadesPrincipales .fila .col ul {
+    list-style: none;
+}
+
+.HabilidadesPrincipales .fila .col ul li {
+    margin: 12px 0;
+}
+
+.HabilidadesPrincipales .fila .col ul li strong {
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+
+.HabilidadesPrincipales .fila .col ul li span {
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.HabilidadesPrincipales .fila .col .contenido-intereses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.HabilidadesPrincipales .fila .col .contenido-intereses .intereses {
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    text-align: center;
+}
+
+.HabilidadesPrincipales .fila .col .contenido-intereses .intereses:hover {
+    background-color: #1CB698;
+}
+
+#HabilidadesPrincipales .fila .col .contenido-intereses .intereses i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff; /* Color de los iconos */
+    text-align: center; /* Centrar el icono horizontalmente */
+}
+
+#HabilidadesPrincipales .fila .col .contenido-intereses .intereses:hover i {
+    color: #1CB698; /* Cambio de color de los iconos al pasar el mouse */
+}
+/*SECCION PROYECTOS */
+.Proyectos {
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.Proyectos .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.Proyectos h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.Proyectos .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Proyectos .galeria .Proyecto {
+    position: relative;
+    width: 300px; /* Establecer un ancho uniforme para los proyectos */
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    align-items: center;
+    overflow: hidden; /* Evitar que las imágenes se desborden del contenedor */
+}
+
+.Proyectos .galeria .Proyecto img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente */
+    display: block;
+    object-fit: cover; /* Ajustar la imagen para que cubra todo el contenedor */
+    max-width: 100%; /* Evita que las imágenes se desborden del contenedor */
+    max-height: 100%; /* Evita que las imágenes se desborden del contenedor */
+}
+
+.Proyectos .galeria .Proyecto .overlay {
+    position: absolute;
+    bottom: 0; /* Posiciona el overlay en la parte inferior del contenedor */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 20px; /* Espacio alrededor del texto */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.Proyectos .galeria .Proyecto .overlay h3,
+.Proyectos .galeria .Proyecto .overlay p {
+    margin: 0; /* Elimina el margen predeterminado */
+    color: #fff; /* Color del texto */
+    transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
+}
+
+.Proyectos .galeria .Proyecto .overlay:hover h3,
+.Proyectos .galeria .Proyecto .overlay:hover p {
+    color: #1CB698; /* Cambia el color del texto al pasar el mouse sobre el overlay */
+}
+
+
+.Proyectos .galeria .Proyecto .overlay i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff; /* Color de los íconos */
+    text-align: center; /* Centrar el ícono horizontalmente */
+    transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
+}
+
+.Proyectos .galeria .Proyecto .overlay:hover i {
+    color: #1CB698; /* Cambia el color del ícono al pasar el mouse sobre el overlay */
+}
+/*SECCION EXPERIENCIA LABORAL */
+.ExperienciaLaboral{
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.ExperienciaLaboral .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.ExperienciaLaboral h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.ExperienciaLaboral .fila{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ExperienciaLaboral .fila .col{
+    width: 49%;
+    padding: 0  20px;
+}
+.ExperienciaLaboral .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.ExperienciaLaboral .fila .izquierda{
+    border-right: 2px solid #252A2E;
+
+}
+.ExperienciaLaboral .fila .derecha{
+    border-left: 2px solid #252A2E;
+    
+}
+.ExperienciaLaboral .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+.ExperienciaLaboral .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.ExperienciaLaboral .fila .item .cargo{
+    color: #1CB698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;   
+}
+.ExperienciaLaboral .fila .item .fecha{
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+.ExperienciaLaboral .fila .item p{
+    line-height: 24px;
+}
+.ExperienciaLaboral .fila .izquierda {
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+    position: relative;
+}
+
+.ExperienciaLaboral .fila .derecha {
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+    position: relative;
+}
+/*SECCION NIVEL DE INGLES */
+.NiveldeIngles{
+    background-color: #0a0000;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.NiveldeIngles .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.NiveldeIngles h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.NiveldeIngles .fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NiveldeIngles .fila .col {
+    width: calc(33.33% - 20px); /* Calcula el ancho de cada columna */
+    padding: 0 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del contenido */
+}
+
+.NiveldeIngles .barra-skill {
+    height: 10px; /* Aumenta la altura de la barra de progreso */
+    width: 80%; /* Ancho de la barra de progreso */
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 20px; /* Reduce el espacio entre las barras de progreso */
+}
+
+.NiveldeIngles .progreso {
+    background-color: #1CB698; /* Color de la barra de progreso */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px; /* Altura de la barra de progreso */
+    border-radius: 5px; /* Borde redondeado */
+    width: 100%; /* Ancho inicial de la barra de progreso */
+    transition: width 0.5s ease-in-out; /* Transición suave del ancho */
+    display: flex;
+    justify-content: flex-end; /* Alineación de los elementos a la derecha */
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+.NiveldeIngles .progreso span {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #1CB698;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    top: -15px; /* Ajusta la posición vertical del círculo */
+    right: -15px; /* Ajusta la posición horizontal del círculo */
+    font-size: 14px;
+    z-index: 1; /* Asegura que el círculo esté por encima de la barra */
+}
+
+.NiveldeIngles .progreso::after {
+    content: attr(data-porcentaje) '%'; /* Muestra el porcentaje dentro del círculo */
+    width: 30px; /* Ancho del círculo */
+    height: 30px; /* Altura del círculo */
+    background-color: #1CB698; /* Color del círculo */
+    border-radius: 50%; /* Hace que el elemento sea un círculo */
+    margin-left: 5px; /* Espacio entre la barra y el círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Asegura que el círculo esté por encima de la barra */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
